@@ -166,8 +166,27 @@
     <h2>Surat Rahasia</h2>
     <p><em>Ayangku yang paling gemoy, makasih udah mau bareng-bareng di cerita ini. Semoga kita kayak WiFi sama HP—selalu nyambung terus selamanya!</em></p>
   </section>
+  
+  <script>
+    
+  // Simpan catatan ke localStorage
+function saveNote() {
+  const note = document.getElementById('noteArea').value;
+  localStorage.setItem('catatanKita', note);
+  const msg = document.getElementById('savedMessage');
+  msg.style.display = 'block';
+  msg.textContent = 'Catatan disimpan!';
+}
 
-  <script src="script.js"></script>
+// Ambil catatan dari localStorage saat halaman dibuka
+window.onload = function () {
+  const savedNote = localStorage.getItem('catatanKita');
+  if (savedNote) {
+    document.getElementById('noteArea').value = savedNote;
+  }
+    
+  <script>
+}
 
   <section class="future-dreams">
     <h2>Kapsul Cinta Masa Depan</h2>
