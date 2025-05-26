@@ -1,29 +1,31 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sweet Love - Sigemoy & Sindy</title>
+  <title>Cinta Manis - Sigemoy & Ayang Sindy</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       background: #fff0f5;
       margin: 0;
       padding: 0;
       text-align: center;
+      overflow-x: hidden;
     }
     header {
-      background: pink;
+      background: linear-gradient(135deg, #ff69b4, #ffb6c1);
       padding: 2rem;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #fff;
     }
     header p {
       margin-top: 0.5rem;
-      font-size: 1.2rem;
-      color: #fff;
+      font-size: 1.3rem;
+      color: #fff8f8;
     }
     section {
       padding: 2rem;
@@ -35,63 +37,139 @@
       gap: 1rem;
     }
     .gallery img {
-      width: 250px;
+      width: 220px;
       border-radius: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
     .love-reasons, .future-dreams {
       background: #ffe4e1;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 1.5rem;
       border-radius: 1rem;
-      max-width: 600px;
+      max-width: 650px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
     }
     .countdown {
       font-size: 1.5rem;
-      color: #d63384;
+      color: #c9184a;
+      margin-top: 1rem;
     }
     footer {
       padding: 1rem;
-      background: #ffc0cb;
+      background: #ff8fa3;
       color: white;
+      font-style: italic;
+    }
+    ul {
+      list-style: heart;
+      padding-left: 0;
+    }
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    /* Hati jatuh */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: fall 5s linear infinite;
+      opacity: 0.6;
+      z-index: 999;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10%;
+        transform: translateX(0) rotate(45deg);
+      }
+      100% {
+        top: 110%;
+        transform: translateX(100px) rotate(45deg);
+      }
     }
   </style>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="lagu-romantis.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung pemutar audio.
+  </audio>
+
   <header>
-    <h1>Sweet Love</h1>
-    <p>Sigemoy & Sindy - 07 Maret 2025</p>
-  </header>  <section>
+    <h1>Cinta Manis</h1>
+    <p>Sigemoy & Ayang Sindy - 07 Maret 2025</p>
+  </header>
+
+  <section>
     <h2>Cerita Kita</h2>
-    <p>Dari awal kita bertemu, semuanya terasa manis. Terima kasih telah menjadi bagian dari hidupku, Ayang.</p>
-  </section>  <section>
+    <p>Dari pertama kali ketemu, kamu langsung nyangkut di hati. Dunia rasanya lebih cerah sejak ada kamu, Ayang!</p>
+  </section>
+
+  <section>
     <h2>Galeri Kenangan</h2>
     <div class="gallery">
-      <img src="IMG_20250421_224103.jpg" alt="Foto 1">
-      <img src="IMG_20250421_224114.jpg" alt="Foto 2">
-      <img src="IMG_20250421_224124.jpg alt="Foto 3">
-      <img src="IMG_20250421_224155.jpg" alt="Foto 4">
-      <img src="IMG_20250421_224225.jpg" alt="Foto 5">
+      <img src="IMG_20250421_224225.jpg" alt="Foto 1">
+      <img src="IMG_20250421_224155.jpg" alt="Foto 2">
+      <img src="IMG_20250421_224124.jpg" alt="Foto 3">
+      <img src="IMG_20250421_224114.jpg" alt="Foto 4">
+      <img src="IMG_20250421_224103.jpg" alt="Foto 5">
     </div>
-  </section>  <section class="love-reasons">
-    <h2>Kenapa Aku Sayang Kamu</h2>
+  </section>
+
+  <section class="love-reasons">
+    <h2>Alasan Aku Sayang Kamu (banget!)</h2>
     <ul>
-      <li>Senyummu bikin hatiku meleleh.</li>
-      <li>Kamu selalu ada buat aku.</li>
-      <li>Kamu lucu banget.</li>
-      <li>Kamu satu-satunya ayangku.</li>
+      <li>Senyummu tuh kayak charger hatiku.</li>
+      <li>Kamu selalu hadir waktu aku butuh—kayak sinyal 5G!</li>
+      <li>Kamu lucunya kayak kucing pake hoodie.</li>
+      <li>Karena... ya kamu itu ayangku satu-satunya!</li>
     </ul>
-  </section>  <section>
+  </section>
+
+  <section>
     <h2>Surat Rahasia</h2>
-    <p><em>Ayangku, terima kasih sudah hadir dalam hidupku. Semoga kita selalu bersama dalam suka dan duka. Kamu yang terbaik.</em></p>
-  </section>  <section class="future-dreams">
-    <h2>Kapsul Waktu</h2>
-    <p>Impian kita: Liburan bareng, lulus bareng, bahagia bareng selamanya.</p>
+    <p><em>Ayangku yang paling gemoy, makasih udah mau bareng-bareng di cerita ini. Semoga kita kayak WiFi sama HP—selalu nyambung terus selamanya!</em></p>
+  </section>
+
+  <section class="future-dreams">
+    <h2>Kapsul Cinta Masa Depan</h2>
+    <p>Impian kita: Liburan berdua (ke Bali atau bulan!), lulus bareng, nikah gemoy, dan tua bareng sambil ngasih makan kucing.</p>
     <p class="countdown" id="countdown"></p>
-  </section>  <footer>
-    <p>Made with love by Sigemoy for Ayang Sindy</p>
-  </footer>  <script>
-    // Countdown to anniversary
+  </section>
+
+  <footer>
+    <p>Dibuat penuh cinta oleh Sigemoy buat Ayang Sindy yang tersayang.</p>
+  </footer>
+
+  <!-- Countdown -->
+  <script>
     const targetDate = new Date("March 7, 2026 00:00:00").getTime();
     const countdownEl = document.getElementById("countdown");
 
@@ -99,9 +177,24 @@
       const now = new Date().getTime();
       const distance = targetDate - now;
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      countdownEl.innerText = `Menuju anniversary kita: ${days} hari lagi`;
+      countdownEl.innerText = `Menuju anniversary kita: ${days} hari lagi, Ayang!`;
     }
+
     updateCountdown();
     setInterval(updateCountdown, 86400000);
+  </script>
+
+  <!-- Hati Jatuh -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>00);
   </script></body>
 </html>
