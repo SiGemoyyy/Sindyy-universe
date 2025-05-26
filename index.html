@@ -116,10 +116,19 @@
     }
   </style>
 </head>
+  <script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('bg-music');
+    audio.muted = false;
+    audio.play().catch(e => {
+      console.log('Autoplay mungkin diblokir:', e);
+    });
+  });
+  </script>
 <body>
-  <audio autoplay loop>
-    <source src="My Heart (Piano + Orchestra) Ost. Heart Series - it's ferdi (1).mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung pemutar audio.
+  <audio id="bg-music" autoplay muted loop>
+  <source src="My Heart (Piano + Orchestra) Ost. Heart Series - it's ferdi (1).mp3" type="audio/mpeg">
+  Browser kamu tidak mendukung pemutar audio.
   </audio>
 
   <header>
